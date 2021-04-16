@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OUCNews</string>
+    <string name="news">新闻</string>
+    <string name="alumnus">校友圈</string>
+    <string name="square">广场</string>
+    <string name="user">我的</string>
+</resources>
