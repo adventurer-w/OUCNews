@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/item_Square"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/square" />
     <item
         android:id="@+id/item_News"
         android:icon="@drawable/ic_home_black_24dp"
@@ -10,14 +13,9 @@
         android:id="@+id/item_Alumnus"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/alumnus" />
-
-    <item
-        android:id="@+id/item_Square"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/square" />
     <item
         android:id="@+id/item_User"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_launcher_foreground"
         android:title="@string/user" />
 
 </menu>

@@ -15,10 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -45,22 +42,26 @@ public class MainActivity extends AppCompatActivity  {
             initFragment();
 
 
-
-
         }
+        
+//-----------------------------------------------------------------------------------------------------
+
+
+
 
     private void initFragment()
     {
-
-
         //绑定空间
         fragments = new Fragment[]{newsFragment,alumnusFragment,squareFragment,userCenterFragment};
-        lastfragment=0;
+
+        //改变顺序1.改下一行数字/对应上一行顺序2.
+        lastfragment=2;
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment,newsFragment).show(newsFragment).commit();
         navigationView=(BottomNavigationView)findViewById(R.id.nav_view);
 
         navigationView.setOnNavigationItemSelectedListener(changeFragment);
     }
+
     //判断选择的菜单
     private BottomNavigationView.OnNavigationItemSelectedListener changeFragment= new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -110,6 +111,8 @@ public class MainActivity extends AppCompatActivity  {
             return false;
         }
     };
+
+
     //切换Fragment
     private void switchFragment(int lastfragment,int index)
     {
@@ -120,8 +123,6 @@ public class MainActivity extends AppCompatActivity  {
             transaction.add(R.id.fragment,fragments[index]);
         }
         transaction.show(fragments[index]).commitAllowingStateLoss();
-
-
     }
 
     }
